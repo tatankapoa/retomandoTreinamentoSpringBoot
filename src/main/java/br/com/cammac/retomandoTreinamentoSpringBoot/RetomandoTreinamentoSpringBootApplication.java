@@ -1,5 +1,6 @@
 package br.com.cammac.retomandoTreinamentoSpringBoot;
 
+import br.com.cammac.retomandoTreinamentoSpringBoot.model.DadosEpisodio;
 import br.com.cammac.retomandoTreinamentoSpringBoot.model.DadosSerie;
 import br.com.cammac.retomandoTreinamentoSpringBoot.service.ConsumoApi;
 import br.com.cammac.retomandoTreinamentoSpringBoot.service.ConvertDados;
@@ -27,6 +28,12 @@ public class RetomandoTreinamentoSpringBootApplication implements CommandLineRun
 		DadosSerie dados = conversor.obterDados(json, DadosSerie.class);
 		
 		System.out.println(dados);
+		
+		json = consumoApi.obterDados("https://omdbapi.com/?t=gilmore+girls&season=1&episode=2&apikey=6585022c");
+		
+		DadosEpisodio dadosEpisodio = conversor.obterDados(json, DadosEpisodio.class);
+		
+		System.out.println(dadosEpisodio);
 		
 	}
 }
