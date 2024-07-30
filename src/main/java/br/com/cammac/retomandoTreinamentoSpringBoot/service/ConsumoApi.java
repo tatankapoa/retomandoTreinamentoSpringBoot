@@ -1,7 +1,5 @@
 package br.com.cammac.retomandoTreinamentoSpringBoot.service;
 
-import org.w3c.dom.html.HTMLObjectElement;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
